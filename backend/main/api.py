@@ -1,7 +1,7 @@
-from rest_framework import viewsets, permissions
-from main.serializers import UserSerializer, ProfileSerializer, LinkSerializer
-from main.models import Profile, Link
 from django.contrib.auth.models import User
+from main.models import Link, Profile
+from main.serializers import LinkSerializer, ProfileSerializer, UserSerializer
+from rest_framework import permissions, viewsets
 
 
 class UserViewSet(viewsets.ModelViewSet):

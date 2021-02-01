@@ -11,10 +11,10 @@ jobs:
       - run: pip install --upgrade pip pipenv wheel
       - run: pip install bandit black codespell flake8 isort mypy pytest pyupgrade
       - run: bandit -r . || true
-      - run: black --check . || true
+      - run: black --check --skip-string-normalization .
       - run: codespell --quiet-level=2  # --ignore-words-list="" --skip=""
       - run: flake8 . --count --ignore=F401 --max-line-length=121 --show-source --statistics
-      - run: isort --check-only --profile black . || true
+      - run: isort --check-only --profile black .
       - id: cache-pipenv
         uses: actions/cache@v1
         with:

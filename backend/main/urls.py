@@ -1,5 +1,5 @@
+from main.api import LinkViewSet, ProfileViewSet, UserViewSet
 from rest_framework import routers
-from main.api import UserViewSet, ProfileViewSet, LinkViewSet
 
 router = routers.DefaultRouter()
 
